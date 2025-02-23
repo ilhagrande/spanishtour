@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  text-align: center;
+  position: relative;
+}
+
+/* Adicionando folhas laterais */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+body::before {
+  background-image: url("../img/f2.png"); /* Ajuste o caminho conforme necessário */
+  left: 0;
+  top: 10%;
+}
+
+body::after {
+  background-image: url("../img/f1.png"); /* Ajuste o caminho conforme necessário */
+  right: 0;
+  top: 30%;
+}
+
+header {
+  background-color: #f4a623;
+  padding: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+.intro {
+  margin: 10px;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.itineraries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 10px;
+  justify-items: center;
+}
+
+.itinerary img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s;
+  border: 3px solid #ccc; /* Adiciona uma borda de 3px com a cor #ccc (cinza claro) */
+}
+
+.itinerary img:hover {
+  transform: scale(1.05);
+  border-color: #f4a623; /* Altera a cor da borda para o tom de laranja quando a imagem é hover */
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Lightbox - tela cheia */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  margin: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Estilo dos botões de navegação */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 768px) {
+  .itineraries {
+    grid-template-columns: repeat(3, 1fr); /* 3 imagens por linha */
+  }
+
+  /* Ajustando o tamanho e a posição das folhas em telas maiores */
+  body::before {
+    width: 200px;
+    height: 300px;
+    top: 10%;
+  }
+
+  body::after {
+    width: 200px;
+    height: 300px;
+    top: 30%;
+  }
+}

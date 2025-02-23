@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ilhas Paradisíacas in English</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Ilhas Paradisíacas in English.</h1>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p>
+          <strong>
+            Below are images with descriptions of the “Ilhas Paradisíacas”
+            itinerary in English, click to see better.
+          </strong>
+        </p>
+      </section>
+      <section class="itineraries">
+        <div class="itinerary">
+          <img
+            src="./img/1.png"
+            alt="Safety Instructions"
+            class="clickable-img"
+          />
+        </div>
+        <div class="itinerary">
+          <img
+            src="./img/2.png"
+            alt="Praia do Dentista"
+            class="clickable-img"
+          />
+        </div>
+        <div class="itinerary">
+          <img src="./img/3.png" alt="Ilhas Botinas" class="clickable-img" />
+        </div>
+        <div class="itinerary">
+          <img src="./img/4.png" alt="Praia de Piedade" class="clickable-img" />
+        </div>
+        <div class="itinerary">
+          <img
+            src="./img/5.png"
+            alt="Ilha de Cataguases"
+            class="clickable-img"
+          />
+        </div>
+      </section>
+
+      <!-- Lightbox container -->
+      <div class="lightbox" id="lightbox">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <button class="nav-btn prev" id="prevBtn">&#10094;</button>
+        <!-- Botão anterior -->
+        <img id="lightbox-img" src="" alt="Lightbox Image" />
+        <button class="nav-btn next" id="nextBtn">&#10095;</button>
+        <!-- Botão próximo -->
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Abraão Tour. All rights reserved.</p>
+    </footer>
+    <script src="../utils/script.js"></script>
+  </body>
+</html>
